@@ -67,6 +67,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-US" className={inter.variable}>
       <body className="flex min-h-screen flex-col font-sans antialiased">
+        {/* Google Tag Manager (noscript) — kept right after <body> per Google's
+            own placement guidance; the script tag itself loads via
+            SiteAnalytics below. Unconditional (not gated to skip /admin) since
+            it only fires with JS disabled, and /admin requires JS to work at
+            all. */}
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+              title="Google Tag Manager"
+            />
+          </noscript>
+        )}
         <EntitySchema data={globalGraph} />
         <Header />
         <main className="flex-1">{children}</main>
