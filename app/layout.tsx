@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import EntitySchema from "@/components/EntitySchema";
+import SiteAnalytics from "@/components/SiteAnalytics";
 import { siteConfig } from "@/lib/site-config";
 import {
   faqPageSchema,
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <SiteAnalytics />
       </body>
     </html>
   );

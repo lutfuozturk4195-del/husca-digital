@@ -16,10 +16,26 @@ export default function AdminDashboardPage() {
     <div>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-semibold text-white">Dashboard</h1>
-        <span className="rounded-full border border-amber-400/25 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
-          Mock data — connect Vercel Analytics for live numbers
-        </span>
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="rounded-full border border-amber-400/25 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
+            Stat cards below are mock data
+          </span>
+          <a
+            href="https://vercel.com/lutfuozturk4195-9831s-projects/husca-digital/analytics"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-white/70 transition hover:bg-white/5 hover:text-white"
+          >
+            View real Vercel Analytics →
+          </a>
+        </div>
       </div>
+      <p className="mt-2 text-xs text-white/40">
+        Vercel Web Analytics is now tracking real visits (added {new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })}).
+        On the Hobby plan its data isn&rsquo;t available via API, so the cards
+        below stay illustrative — use the link above for real pageviews and
+        visitors until that changes.
+      </p>
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard
