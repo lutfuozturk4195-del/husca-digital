@@ -17,11 +17,13 @@ const AI_CRAWLERS = [
   "CCBot",
 ];
 
+const ADMIN_PATHS = ["/admin", "/api/admin"];
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/" },
-      ...AI_CRAWLERS.map((userAgent) => ({ userAgent, allow: "/" })),
+      { userAgent: "*", allow: "/", disallow: ADMIN_PATHS },
+      ...AI_CRAWLERS.map((userAgent) => ({ userAgent, allow: "/", disallow: ADMIN_PATHS })),
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
     host: siteConfig.url,

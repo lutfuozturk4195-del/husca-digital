@@ -28,6 +28,7 @@ function loadPosts() {
       const { data, content } = matter(raw);
       return { ...data, slug: file.replace(/\.md$/, ""), content: content.trim() };
     })
+    .filter((post) => post.status !== "draft")
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 

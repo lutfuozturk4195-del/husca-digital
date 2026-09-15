@@ -3,12 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import EntitySchema from "@/components/EntitySchema";
 import BlogCTA from "@/components/BlogCTA";
-import { getAllSlugs, getPostBySlug } from "@/lib/posts";
+import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { siteConfig } from "@/lib/site-config";
 import { blogPostingSchema, breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 
 export function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  // Published only — draft slugs aren't pre-rendered or publicly reachable.
+  return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({

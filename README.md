@@ -13,6 +13,7 @@ machine-readable `llms.txt` files for AI crawlers.
 - **Tailwind CSS** + `@tailwindcss/typography` for article styling
 - Markdown blog pipeline: `gray-matter` + `unified`/`remark`/`rehype` (GFM tables, heading slugs)
 - Edge API route (`/api/audit`) forwarding lead form submissions to an automation webhook (n8n, Zapier, Make…)
+- `/admin` — password-protected dashboard + blog CMS (see below)
 
 ## Getting started
 
@@ -92,6 +93,47 @@ forwards the payload to `AUDIT_WEBHOOK_URL` (set in `.env.local` / your
 hosting provider's env vars) — point this at an n8n, Zapier, or Make webhook
 to trigger the automated audit workflow. Without the env var set, submissions
 are logged server-side so the UI flow can still be tested locally.
+
+## Admin (`/admin`)
+
+A lightweight, password-protected dashboard + blog CMS. Not linked from the
+public site — reachable only by URL, and excluded from `robots.txt`.
+
+- **`/admin/dashboard`** — pageviews / visitors / form submissions / AI bot
+  traffic share stat cards, plus a 7-day trend bar chart. **The numbers are
+  mock data** (clearly labeled in the UI) — there's no analytics backend
+  wired up yet. Swap `lib/admin/mock-analytics.ts` for real Vercel Analytics
+  or log-based data later; every component downstream already consumes that
+  module's shape.
+- **`/admin/posts`** — list, create, edit, and delete blog posts
+  (`content/blog/*.md`), including a `draft` status that's hidden from the
+  public site, sitemap, and `llms.txt` until switched to `published`.
+
+**Auth**: a single shared password (`ADMIN_PASSWORD`), checked in
+`/api/admin/auth/login`, which sets an HttpOnly signed session cookie
+(`lib/admin/auth.ts`, HMAC-SHA256 via Web Crypto — no session store, no
+extra dependency). `middleware.ts` gates every `/admin/*` page and
+`/api/admin/*` route behind that cookie. This is intentionally simple —
+one password, no per-user accounts — appropriate for a single-operator
+site, not a multi-editor CMS.
+
+**Why writes go through GitHub in production**: Vercel's deployed
+filesystem is read-only, so `content/blog/*.md` can't be edited in place
+once deployed. `lib/admin/posts-store.ts` branches on `process.env.VERCEL`:
+locally it writes straight to disk (instant); in production it commits the
+change via GitHub's Contents API (`lib/admin/github.ts`), which — since
+this repo is connected to Vercel — triggers the same auto-deploy used for
+every other push. A save on the live site is a real commit, live in
+roughly 30-60 seconds, not instant. Deleting a post commits a deletion the
+same way.
+
+Required env vars (`.env.local` locally, Vercel project settings in prod):
+
+| Variable | Purpose |
+|---|---|
+| `ADMIN_PASSWORD` | The `/admin` login password. |
+| `ADMIN_SESSION_SECRET` | Random secret signing the session cookie. Generate with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`. |
+| `CMS_GITHUB_TOKEN` | **Production only.** A GitHub PAT with `Contents: Read and write` scoped to this repo — used to commit post changes. Not needed in local dev (fs writes don't need it). |
 
 ## Deployment
 
