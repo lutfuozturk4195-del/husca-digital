@@ -62,7 +62,7 @@ export default function AdminDashboardPage() {
         />
       </div>
 
-      <Card className="mt-6 rounded-2xl border-border p-2 shadow-none ring-0">
+      <Card className="mt-6 rounded-2xl border-border p-2 shadow-md ring-0">
         <CardContent className="px-5 py-5">
           <h2 className="text-sm font-semibold text-foreground">Traffic — last 7 days</h2>
           <div className="mt-6">

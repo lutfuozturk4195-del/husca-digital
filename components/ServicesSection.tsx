@@ -27,7 +27,7 @@ export default function ServicesSection() {
               <Card
                 key={service.slug}
                 id={service.slug}
-                className="scroll-mt-24 gap-3 rounded-2xl border-border p-2 shadow-none ring-0 transition hover:border-accent-400/50 hover:shadow-sm"
+                className="scroll-mt-24 gap-3 rounded-2xl border-border p-2 shadow-sm ring-0 transition-all duration-200 hover:-translate-y-1 hover:border-accent-400/60 hover:shadow-xl hover:shadow-accent-500/10"
               >
                 <CardHeader className="px-4 pt-2">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-accent-foreground">

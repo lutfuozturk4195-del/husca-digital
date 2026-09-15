@@ -48,6 +48,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  verification: {
+    google: "iSJJPwyUdIGTSSL-2WBNTUvCjTbV4aDG-FptImNmUDs",
+  },
 };
 
 // Global entity graph: Organization + WebSite + ProfessionalService + FAQPage,

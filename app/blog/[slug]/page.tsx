@@ -100,7 +100,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       </header>
 
       {/* Answer-first block: the direct, quotable answer AI engines can lift. */}
-      <Card className="mt-8 gap-0 rounded-2xl border-accent-400/25 bg-accent-500/[0.05] p-2 shadow-none ring-0">
+      <Card className="mt-8 gap-0 rounded-2xl border-accent-400/25 bg-accent-500/[0.05] p-2 shadow-md shadow-accent-500/10 ring-0">
         <CardContent className="px-6 py-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-accent-500">
             Direct Answer

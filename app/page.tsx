@@ -18,7 +18,7 @@ export default function HomePage() {
       {/* Lead Magnet: AI Search Visibility Audit */}
       <section id="audit" className="scroll-mt-24 py-24">
         <div className="mx-auto max-w-4xl px-6">
-          <Card className="grid gap-10 rounded-3xl border-border p-2 shadow-sm ring-0 md:grid-cols-2 md:gap-14 md:p-4">
+          <Card className="grid gap-10 rounded-3xl border-border p-2 shadow-xl shadow-accent-500/10 ring-0 md:grid-cols-2 md:gap-14 md:p-4">
             <div className="px-6 pt-6 md:px-4 md:pt-4">
               <p className="text-xs font-semibold uppercase tracking-wider text-cyan-600">
                 Free Lead Magnet
@@ -76,7 +76,7 @@ export default function HomePage() {
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {latestPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
-                <Card className="h-full rounded-2xl border-border p-6 shadow-none ring-0 transition hover:border-accent-400/50 hover:shadow-sm">
+                <Card className="h-full rounded-2xl border-border p-6 shadow-sm ring-0 transition-all duration-200 hover:-translate-y-1 hover:border-accent-400/60 hover:shadow-xl hover:shadow-accent-500/10">
                   <span className="text-xs font-medium text-muted-foreground">
                     {new Date(post.date).toLocaleDateString("en-US", {
                       month: "short",

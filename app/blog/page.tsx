@@ -33,7 +33,7 @@ export default function BlogIndexPage() {
       <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
-            <Card className="flex h-full flex-col rounded-2xl border-border p-6 shadow-none ring-0 transition hover:border-accent-400/50 hover:shadow-sm">
+            <Card className="flex h-full flex-col rounded-2xl border-border p-6 shadow-sm ring-0 transition-all duration-200 hover:-translate-y-1 hover:border-accent-400/60 hover:shadow-xl hover:shadow-accent-500/10">
               <div className="flex flex-wrap gap-2">
                 {post.tags.slice(0, 2).map((tag) => (
                   <Badge key={tag} variant="outline" className="rounded-full text-muted-foreground">

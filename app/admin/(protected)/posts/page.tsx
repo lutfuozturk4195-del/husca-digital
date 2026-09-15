@@ -30,7 +30,7 @@ export default function AdminPostsPage() {
         </Button>
       </div>
 
-      <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card">
+      <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card shadow-md">
         <Table className="min-w-[720px]">
           <TableHeader>
             <TableRow className="hover:bg-transparent">

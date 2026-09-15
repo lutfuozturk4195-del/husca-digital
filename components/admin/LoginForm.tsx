@@ -41,7 +41,7 @@ export default function LoginForm() {
   }
 
   return (
-    <Card className="w-full max-w-sm rounded-2xl border-border p-2 shadow-sm ring-0">
+    <Card className="w-full max-w-sm rounded-2xl border-border p-2 shadow-2xl shadow-accent-500/10 ring-0">
       <CardContent className="px-6 py-6">
         <form onSubmit={handleSubmit}>
           <div className="flex items-center gap-2">

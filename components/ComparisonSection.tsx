@@ -37,7 +37,7 @@ export default function ComparisonSection() {
           </p>
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-card">
+        <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-card shadow-lg shadow-foreground/5">
           <Table className="min-w-[560px]">
             <TableHeader>
               <TableRow className="hover:bg-transparent">

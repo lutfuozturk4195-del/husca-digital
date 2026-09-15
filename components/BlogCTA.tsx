@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 /** Built-in conversion CTA embedded inside every blog post body. */
 export default function BlogCTA() {
   return (
-    <Card className="not-prose my-10 gap-2 rounded-2xl border-accent-400/25 bg-gradient-to-br from-accent-500/[0.06] to-cyan-400/[0.04] p-2 shadow-none ring-0">
+    <Card className="not-prose my-10 gap-2 rounded-2xl border-accent-400/25 bg-gradient-to-br from-accent-500/[0.06] to-cyan-400/[0.04] p-2 shadow-lg shadow-accent-500/10 ring-0">
       <CardContent className="px-6 py-6 sm:px-8">
         <p className="text-xs font-semibold uppercase tracking-wider text-accent-500">
           Free Audit
