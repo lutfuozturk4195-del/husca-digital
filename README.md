@@ -93,11 +93,24 @@ hosting provider's env vars) — point this at an n8n, Zapier, or Make webhook
 to trigger the automated audit workflow. Without the env var set, submissions
 are logged server-side so the UI flow can still be tested locally.
 
+## Deployment
+
+Live at **https://huscadigital.com** (Vercel, US regions — see
+`preferredRegion` in `app/api/audit/route.ts`).
+
+- Hosting: Vercel project `husca-digital`
+- Git integration: connected to this repo's `main` branch — every push
+  triggers an automatic production deployment
+- DNS: `huscadigital.com` / `www.huscadigital.com` point at Vercel via `A`
+  records (`76.76.21.21`) on the domain's registrar
+
 ## Before going to production
 
-- Set `NEXT_PUBLIC_SITE_URL` to the real domain (used in canonical URLs,
-  sitemap, JSON-LD, and generated `llms.txt`).
-- Replace the placeholder `sameAs` profile URLs and `logo` in
-  `data/site-config.json`.
-- Set `AUDIT_WEBHOOK_URL` to the live automation endpoint.
-- Add real OG/social images and a favicon set.
+- [x] `NEXT_PUBLIC_SITE_URL` set to `https://huscadigital.com` (Vercel env var)
+- [x] Static favicon (`app/icon.svg`) and dynamic OG images (home + per blog
+      post) in place
+- [ ] Replace the placeholder `sameAs` profile URLs and `logo` in
+      `data/site-config.json` with the real accounts
+- [ ] Set `AUDIT_WEBHOOK_URL` once the lead-capture automation (n8n or
+      otherwise) is ready — until then, audit submissions are only logged
+      server-side, not stored anywhere durable
