@@ -20,7 +20,6 @@ export function organizationSchema() {
     logo: siteConfig.logo,
     foundingDate: siteConfig.foundingDate,
     description: siteConfig.description,
-    email: siteConfig.email,
     sameAs: siteConfig.sameAs,
     knowsAbout: siteConfig.knowsAbout,
     areaServed: {

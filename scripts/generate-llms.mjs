@@ -83,7 +83,7 @@ function buildLlmsFullTxt(posts) {
   lines.push(`- Legal name: ${site.legalName}`);
   lines.push(`- URL: ${siteUrl}`);
   lines.push(`- Area served: ${site.areaServed}`);
-  lines.push(`- Contact: ${site.email}`);
+  lines.push(`- Contact: ${siteUrl}/#audit (free AI visibility audit request form)`);
   lines.push(`- Known for: ${site.knowsAbout.join(", ")}`);
   lines.push(`- Profiles: ${site.sameAs.join(", ")}`);
   lines.push("");

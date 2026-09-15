@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Hero from "@/components/Hero";
 import AuditForm from "@/components/AuditForm";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -42,23 +42,25 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-
-              <div className="mt-6 border-t border-border pt-5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Stay in the loop
-                </p>
-                <p className="mt-1.5 text-sm text-muted-foreground">
-                  Get the GEO Playbook in your inbox — new articles, no spam.
-                </p>
-                <div className="mt-3">
-                  <NewsletterForm />
-                </div>
-              </div>
             </div>
 
             <div className="self-center px-6 pb-6 md:px-4 md:pb-4">
               <AuditForm />
             </div>
+          </Card>
+
+          <Card className="mt-6 rounded-3xl border-border p-2 shadow-lg shadow-accent-500/10 ring-0">
+            <CardContent className="px-6 py-8 text-center md:px-10">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Stay in the loop
+              </p>
+              <p className="mt-1.5 text-sm text-muted-foreground">
+                Get the GEO Playbook in your inbox — new articles, no spam.
+              </p>
+              <div className="mx-auto mt-4 max-w-sm">
+                <NewsletterForm />
+              </div>
+            </CardContent>
           </Card>
         </div>
       </section>

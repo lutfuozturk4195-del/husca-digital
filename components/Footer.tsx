@@ -54,12 +54,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {siteConfig.email}
-                </a>
+                <Link href="/#audit" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Free Audit
+                </Link>
               </li>
             </ul>
           </div>
