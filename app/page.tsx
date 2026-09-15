@@ -44,18 +44,6 @@ export default function HomePage() {
               </ul>
 
               <div className="mt-6 border-t border-border pt-5">
-                <p className="text-sm text-muted-foreground">
-                  Prefer to talk directly?{" "}
-                  <a
-                    href="mailto:lutfu.dev@gmail.com"
-                    className="font-semibold text-accent-500 hover:underline"
-                  >
-                    lutfu.dev@gmail.com
-                  </a>
-                </p>
-              </div>
-
-              <div className="mt-6 border-t border-border pt-5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   Stay in the loop
                 </p>

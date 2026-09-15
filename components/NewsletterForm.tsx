@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -43,14 +44,20 @@ export default function NewsletterForm() {
 
   if (status === "success") {
     return (
-      <p className="text-sm font-medium text-cyan-600">
-        ✓ You&rsquo;re on the list — we&rsquo;ll only email when there&rsquo;s something worth reading.
-      </p>
+      <div className="flex flex-col items-center gap-2 rounded-2xl border border-cyan-400/30 bg-cyan-400/5 px-6 py-8 text-center">
+        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-400/15 text-cyan-600">
+          ✓
+        </span>
+        <p className="text-sm font-medium text-foreground">You&rsquo;re on the list</p>
+        <p className="text-xs text-muted-foreground">
+          We&rsquo;ll only email when there&rsquo;s something worth reading.
+        </p>
+      </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-2 sm:flex-row">
+    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
       <input
         type="text"
         name="company_website"
@@ -59,23 +66,36 @@ export default function NewsletterForm() {
         className="hidden"
         aria-hidden="true"
       />
-      <Input
-        type="email"
-        placeholder="you@company.com"
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
-        required
-        aria-label="Email address"
-        className="h-10 flex-1 rounded-xl px-4"
-      />
-      <Button type="submit" disabled={status === "submitting"} variant="secondary" className="h-10 rounded-xl px-5">
-        {status === "submitting" ? "Subscribing…" : "Subscribe"}
-      </Button>
+
+      <div>
+        <Label htmlFor="newsletter-email" className="mb-1.5 text-xs font-medium text-muted-foreground">
+          Email address
+        </Label>
+        <Input
+          id="newsletter-email"
+          type="email"
+          placeholder="you@company.com"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          required
+          className="h-11 rounded-xl px-4"
+        />
+      </div>
+
       {errorMessage && (
-        <p role="alert" className="text-xs font-medium text-destructive sm:basis-full">
+        <p role="alert" className="text-xs font-medium text-destructive">
           {errorMessage}
         </p>
       )}
+
+      <Button
+        type="submit"
+        disabled={status === "submitting"}
+        size="lg"
+        className="h-11 w-full rounded-xl text-sm"
+      >
+        {status === "submitting" ? "Subscribing…" : "Subscribe to the Playbook"}
+      </Button>
     </form>
   );
 }

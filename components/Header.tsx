@@ -40,7 +40,7 @@ export default function Header() {
             size="lg"
             className="h-9 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-400 px-4 text-white shadow-md shadow-cyan-500/30 hover:-translate-y-0.5 hover:from-cyan-400 hover:to-cyan-400 hover:shadow-lg hover:shadow-cyan-500/40"
           >
-            <a href="mailto:lutfu.dev@gmail.com">
+            <a href={`mailto:${siteConfig.email}`}>
               <Mail className="size-4" />
               <span className="hidden sm:inline">Contact</span>
             </a>
