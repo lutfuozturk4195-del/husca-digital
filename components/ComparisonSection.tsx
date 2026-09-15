@@ -13,7 +13,15 @@ const ROWS: { dimension: string; seo: string; geo: string }[] = [
  */
 export default function ComparisonSection() {
   return (
-    <section className="border-t border-white/5 py-24">
+    <section className="relative overflow-hidden border-t border-white/5 py-24">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-24 top-10 -z-10 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-24 bottom-0 -z-10 h-72 w-72 rounded-full bg-accent-500/10 blur-3xl"
+      />
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-wider text-accent-400">

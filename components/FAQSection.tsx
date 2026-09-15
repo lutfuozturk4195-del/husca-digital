@@ -7,7 +7,11 @@ import { siteConfig } from "@/lib/site-config";
  */
 export default function FAQSection() {
   return (
-    <section id="faq" className="border-t border-white/5 py-24">
+    <section id="faq" className="relative overflow-hidden border-t border-white/5 py-24">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-96 w-[36rem] -translate-x-1/2 rounded-full bg-accent-500/5 blur-3xl"
+      />
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-wider text-accent-400">FAQ</p>

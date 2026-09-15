@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EntityGraphBackground from "@/components/EntityGraphBackground";
 import { siteConfig } from "@/lib/site-config";
 
 const PROOF_POINTS = [
@@ -12,7 +13,10 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-hero-glow">
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-grid-fade bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_60%,transparent_100%)]"
+        className="absolute inset-0 -z-10 bg-grid-fade bg-[size:48px_48px] opacity-40 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_60%,transparent_100%)]"
+      />
+      <EntityGraphBackground
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-70 [mask-image:radial-gradient(ellipse_65%_60%_at_50%_20%,#000_55%,transparent_100%)] sm:opacity-90"
       />
 
       <div className="mx-auto max-w-5xl px-6 pb-20 pt-20 text-center md:pt-28">
