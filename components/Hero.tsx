@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import EntityGraphBackground from "@/components/EntityGraphBackground";
 import { siteConfig } from "@/lib/site-config";
 
@@ -10,51 +11,45 @@ const PROOF_POINTS = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-hero-glow">
+    <section className="relative overflow-hidden">
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-grid-fade bg-[size:48px_48px] opacity-40 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_60%,transparent_100%)]"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(139,143,249,0.14)_0%,transparent_70%)]"
       />
       <EntityGraphBackground
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-70 [mask-image:radial-gradient(ellipse_65%_60%_at_50%_20%,#000_55%,transparent_100%)] sm:opacity-90"
       />
 
       <div className="mx-auto max-w-5xl px-6 pb-20 pt-20 text-center md:pt-28">
-        <p className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/70">
+        <p className="mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground shadow-sm">
           <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
           GEO &amp; AI Search Growth Agency — {siteConfig.areaServed} Market
         </p>
 
-        <h1 className="mx-auto mt-6 max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
+        <h1 className="mx-auto mt-6 max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl">
           {siteConfig.valueProposition}
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-white/60">
+        <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-muted-foreground">
           Google SEO alone no longer decides who your buyers find. We engineer your
           entity, content, and technical infrastructure so generative answer engines
-          cite <em className="text-white/80 not-italic">you</em> — not just rank you.
+          cite <em className="text-foreground not-italic">you</em> — not just rank you.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href="/#audit"
-            className="w-full rounded-full bg-gradient-to-r from-accent-500 to-cyan-400 px-7 py-3.5 text-sm font-semibold text-ink-950 shadow-lg shadow-accent-500/20 transition hover:opacity-90 sm:w-auto"
-          >
-            Get My Free AI Visibility Audit
-          </Link>
-          <Link
-            href="/blog"
-            className="w-full rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/5 sm:w-auto"
-          >
-            Read the GEO Playbook
-          </Link>
+          <Button asChild size="lg" className="h-11 w-full rounded-full px-7 text-sm sm:w-auto">
+            <Link href="/#audit">Get My Free AI Visibility Audit</Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="h-11 w-full rounded-full px-7 text-sm sm:w-auto">
+            <Link href="/blog">Read the GEO Playbook</Link>
+          </Button>
         </div>
 
-        <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 border-t border-white/10 pt-10 text-left sm:grid-cols-3">
+        <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 border-t border-border pt-10 text-left sm:grid-cols-3">
           {PROOF_POINTS.map((point) => (
             <div key={point.label}>
-              <dt className="text-3xl font-semibold text-white">{point.value}</dt>
-              <dd className="mt-1 text-sm text-white/50">{point.label}</dd>
+              <dt className="text-3xl font-semibold text-foreground">{point.value}</dt>
+              <dd className="mt-1 text-sm text-muted-foreground">{point.label}</dd>
             </div>
           ))}
         </dl>

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import StatCard from "@/components/admin/StatCard";
 import TrendChart from "@/components/admin/TrendChart";
 import { getSummary, getTrend } from "@/lib/admin/mock-analytics";
@@ -15,22 +17,22 @@ export default function AdminDashboardPage() {
   return (
     <div>
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-2xl font-semibold text-white">Dashboard</h1>
+        <h1 className="text-2xl font-semibold text-foreground">Dashboard</h1>
         <div className="flex flex-wrap items-center gap-3">
-          <span className="rounded-full border border-amber-400/25 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
+          <Badge variant="outline" className="rounded-full border-amber-500/30 bg-amber-500/10 text-amber-700">
             Stat cards below are mock data
-          </span>
+          </Badge>
           <a
             href="https://vercel.com/lutfuozturk4195-9831s-projects/husca-digital/analytics"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-white/70 transition hover:bg-white/5 hover:text-white"
+            className="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
           >
             View real Vercel Analytics →
           </a>
         </div>
       </div>
-      <p className="mt-2 text-xs text-white/40">
+      <p className="mt-2 text-xs text-muted-foreground">
         Vercel Web Analytics is now tracking real visits (added {new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })}).
         On the Hobby plan its data isn&rsquo;t available via API, so the cards
         below stay illustrative — use the link above for real pageviews and
@@ -60,12 +62,14 @@ export default function AdminDashboardPage() {
         />
       </div>
 
-      <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.02] p-5">
-        <h2 className="text-sm font-semibold text-white">Traffic — last 7 days</h2>
-        <div className="mt-6">
-          <TrendChart data={trend} />
-        </div>
-      </div>
+      <Card className="mt-6 rounded-2xl border-border p-2 shadow-none ring-0">
+        <CardContent className="px-5 py-5">
+          <h2 className="text-sm font-semibold text-foreground">Traffic — last 7 days</h2>
+          <div className="mt-6">
+            <TrendChart data={trend} />
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function NewPostPage() {
   return (
     <div>
-      <h1 className="text-2xl font-semibold text-white">New Post</h1>
+      <h1 className="text-2xl font-semibold text-foreground">New Post</h1>
       <PostForm mode="create" />
     </div>
   );

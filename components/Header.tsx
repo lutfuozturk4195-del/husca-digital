@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
 const NAV_LINKS = [
@@ -9,13 +10,13 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-ink-950/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-400 to-cyan-400 text-sm font-bold text-ink-950">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-500 to-cyan-400 text-sm font-bold text-white shadow-sm">
             H
           </span>
-          <span className="text-base font-semibold tracking-tight text-white">
+          <span className="text-base font-semibold tracking-tight text-foreground">
             {siteConfig.name}
           </span>
         </Link>
@@ -25,19 +26,16 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/70 transition hover:text-white"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <Link
-          href="/#audit"
-          className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-ink-950 transition hover:bg-white/90"
-        >
-          Get Free Audit
-        </Link>
+        <Button asChild size="lg" className="h-9 rounded-full px-5">
+          <Link href="/#audit">Get Free Audit</Link>
+        </Button>
       </div>
     </header>
   );

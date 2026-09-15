@@ -1,37 +1,44 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { siteConfig } from "@/lib/site-config";
 
 /**
- * Renders as a plain, fully-expanded FAQ list (no client-side accordion
- * hidden behind JS) so both Googlebot and LLM fetchers get every answer
- * in the initial HTML — matching the FAQPage JSON-LD emitted alongside it.
+ * Radix Accordion keeps each panel's content mounted in the DOM (just
+ * visually collapsed via CSS), so every answer is still present in the
+ * initial HTML for crawlers/LLM fetchers — matching the FAQPage JSON-LD
+ * emitted alongside it, accordion state or not.
  */
 export default function FAQSection() {
   return (
-    <section id="faq" className="relative overflow-hidden border-t border-white/5 py-24">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-96 w-[36rem] -translate-x-1/2 rounded-full bg-accent-500/5 blur-3xl"
-      />
+    <section id="faq" className="border-t border-border py-24">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-wider text-accent-400">FAQ</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <p className="text-xs font-semibold uppercase tracking-wider text-accent-500">FAQ</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Questions AI answer engines get asked constantly
           </h2>
-          <p className="mt-4 text-white/50">
+          <p className="mt-4 text-muted-foreground">
             Structured for humans and machines alike — this section is also published
             as FAQPage schema.
           </p>
         </div>
 
-        <dl className="mt-14 divide-y divide-white/10 border-t border-white/10">
+        <Accordion type="single" collapsible className="mt-14 border-t border-border">
           {siteConfig.faqs.map((faq) => (
-            <div key={faq.question} className="py-6">
-              <dt className="text-base font-semibold text-white">{faq.question}</dt>
-              <dd className="mt-2 text-sm leading-relaxed text-white/55">{faq.answer}</dd>
-            </div>
+            <AccordionItem key={faq.question} value={faq.question} className="border-border py-1">
+              <AccordionTrigger className="py-5 text-base font-semibold text-foreground hover:no-underline">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </dl>
+        </Accordion>
       </div>
     </section>
   );

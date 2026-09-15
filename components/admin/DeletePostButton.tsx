@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 export default function DeletePostButton({ slug }: { slug: string }) {
   const router = useRouter();
@@ -24,12 +25,14 @@ export default function DeletePostButton({ slug }: { slug: string }) {
   }
 
   return (
-    <button
+    <Button
       onClick={handleDelete}
       disabled={loading}
-      className="text-red-400 transition hover:underline disabled:opacity-50"
+      variant="ghost"
+      size="sm"
+      className="h-auto p-0 font-medium text-destructive hover:bg-transparent hover:text-destructive hover:underline"
     >
       {loading ? "Deleting…" : "Delete"}
-    </button>
+    </Button>
   );
 }

@@ -71,43 +71,33 @@ export default function EntityGraphBackground({ className }: { className?: strin
     >
       <defs>
         <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#8b8ff9" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#8b8ff9" stopOpacity="0" />
+          <stop offset="0%" stopColor="#6d6ff5" stopOpacity="0.16" />
+          <stop offset="100%" stopColor="#6d6ff5" stopOpacity="0" />
         </radialGradient>
         <linearGradient id="edgeGradient" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#8b8ff9" />
-          <stop offset="100%" stopColor="#5ee6d0" />
+          <stop offset="0%" stopColor="#6d6ff5" />
+          <stop offset="100%" stopColor="#2dd4bf" />
         </linearGradient>
       </defs>
 
-      {/* Outer wrapper: nudged toward the cursor, written directly via ref */}
-      <g ref={parallaxRef} style={{ transition: "transform 0.6s ease-out" }}>
-        {/* Inner wrapper: slow continuous orbit around the hub */}
-        <g className="husca-orbit" style={{ transformOrigin: `${hub.x}px ${hub.y}px` }}>
-          {/* Faint outer connections suggesting a wider knowledge graph */}
-          <g stroke="url(#edgeGradient)" strokeOpacity="0.12" strokeWidth="1">
-            {outer.map((o, i) => (
-              <line
-                key={`outer-${i}`}
-                x1={o.x}
-                y1={o.y}
-                x2={satellites[i % satellites.length].x}
-                y2={satellites[i % satellites.length].y}
-              />
-            ))}
-          </g>
+      {/* Faint outer connections suggesting a wider knowledge graph */}
+      <g stroke="url(#edgeGradient)" strokeOpacity="0.14" strokeWidth="1">
+        {outer.map((o, i) => (
+          <line key={`outer-${i}`} x1={o.x} y1={o.y} x2={satellites[i % satellites.length].x} y2={satellites[i % satellites.length].y} />
+        ))}
+      </g>
 
-          {/* Hub -> satellite edges */}
-          <g stroke="url(#edgeGradient)" strokeOpacity="0.3" strokeWidth="1.25">
-            {satellites.map((s, i) => (
-              <line key={`edge-${i}`} x1={hub.x} y1={hub.y} x2={s.x} y2={s.y} />
-            ))}
-          </g>
+      {/* Hub -> satellite edges */}
+      <g ref={parallaxRef} stroke="url(#edgeGradient)" strokeOpacity="0.28" strokeWidth="1.25" style={{ transition: "transform 0.6s ease-out" }}>
+        <g className="husca-orbit" style={{ transformOrigin: `${hub.x}px ${hub.y}px` }}>
+          {satellites.map((s, i) => (
+            <line key={`edge-${i}`} x1={hub.x} y1={hub.y} x2={s.x} y2={s.y} />
+          ))}
 
           <circle cx={hub.x} cy={hub.y} r="90" fill="url(#hubGlow)" />
 
           {outer.map((o, i) => (
-            <circle key={`onode-${i}`} cx={o.x} cy={o.y} r="2.5" className="fill-white/20" />
+            <circle key={`onode-${i}`} cx={o.x} cy={o.y} r="2.5" fill="#94a3b8" fillOpacity="0.4" />
           ))}
 
           {satellites.map((s, i) => (
@@ -116,7 +106,7 @@ export default function EntityGraphBackground({ className }: { className?: strin
               cx={s.x}
               cy={s.y}
               r="4.5"
-              className="fill-cyan-300/70"
+              fill="#2dd4bf"
               style={{
                 animation: "husca-node-pulse 3.2s ease-in-out infinite",
                 animationDelay: `${i * 0.35}s`,
@@ -124,11 +114,10 @@ export default function EntityGraphBackground({ className }: { className?: strin
               }}
             />
           ))}
-
-          <circle cx={hub.x} cy={hub.y} r="7" className="fill-white" />
-          <circle cx={hub.x} cy={hub.y} r="7" fill="none" stroke="#8b8ff9" strokeWidth="2" />
         </g>
       </g>
+
+      <circle cx={hub.x} cy={hub.y} r="7" fill="#ffffff" stroke="#6d6ff5" strokeWidth="2.5" />
     </svg>
   );
 }

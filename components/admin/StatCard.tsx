@@ -1,3 +1,5 @@
+import { Card, CardContent } from "@/components/ui/card";
+
 export default function StatCard({
   label,
   value,
@@ -8,10 +10,12 @@ export default function StatCard({
   hint?: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
-      <p className="text-xs font-medium uppercase tracking-wider text-white/40">{label}</p>
-      <p className="mt-2 text-3xl font-semibold text-white">{value}</p>
-      {hint && <p className="mt-1 text-xs text-white/35">{hint}</p>}
-    </div>
+    <Card className="rounded-2xl border-border p-2 shadow-none ring-0">
+      <CardContent className="px-5 py-5">
+        <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{label}</p>
+        <p className="mt-2 text-3xl font-semibold text-foreground">{value}</p>
+        {hint && <p className="mt-1 text-xs text-muted-foreground">{hint}</p>}
+      </CardContent>
+    </Card>
   );
 }

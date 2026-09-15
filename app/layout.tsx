@@ -63,7 +63,7 @@ const globalGraph = jsonLdGraph(
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-US" className={inter.variable}>
-      <body className="flex min-h-screen flex-col font-sans">
+      <body className="flex min-h-screen flex-col font-sans antialiased">
         <EntitySchema data={globalGraph} />
         <Header />
         <main className="flex-1">{children}</main>

@@ -14,7 +14,7 @@ export default function EditPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold text-white">Edit Post</h1>
+      <h1 className="text-2xl font-semibold text-foreground">Edit Post</h1>
       <PostForm
         mode="edit"
         initialValues={{

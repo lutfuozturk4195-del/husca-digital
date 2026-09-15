@@ -1,6 +1,9 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -61,12 +64,12 @@ export default function AuditForm() {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-2xl border border-cyan-400/20 bg-cyan-400/5 px-6 py-10 text-center">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-400/15 text-cyan-300">
+      <div className="flex flex-col items-center gap-3 rounded-2xl border border-cyan-400/30 bg-cyan-400/5 px-6 py-10 text-center">
+        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-400/15 text-cyan-600">
           ✓
         </span>
-        <h3 className="text-lg font-semibold text-white">Audit request received</h3>
-        <p className="max-w-sm text-sm text-white/60">
+        <h3 className="text-lg font-semibold text-foreground">Audit request received</h3>
+        <p className="max-w-sm text-sm text-muted-foreground">
           We&rsquo;re running your AI Citation &amp; Visibility report now. Check your inbox
           within the next 24 hours.
         </p>
@@ -87,10 +90,10 @@ export default function AuditForm() {
       />
 
       <div>
-        <label htmlFor="domain" className="mb-1.5 block text-xs font-medium text-white/60">
+        <Label htmlFor="domain" className="mb-1.5 text-xs font-medium text-muted-foreground">
           Company Domain
-        </label>
-        <input
+        </Label>
+        <Input
           id="domain"
           name="domain"
           type="text"
@@ -99,15 +102,15 @@ export default function AuditForm() {
           value={domain}
           onChange={(event) => setDomain(event.target.value)}
           required
-          className="w-full rounded-xl border border-white/10 bg-ink-900 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-accent-400/60 focus:ring-2 focus:ring-accent-400/20"
+          className="h-11 rounded-xl px-4"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-1.5 block text-xs font-medium text-white/60">
+        <Label htmlFor="email" className="mb-1.5 text-xs font-medium text-muted-foreground">
           Work Email
-        </label>
-        <input
+        </Label>
+        <Input
           id="email"
           name="email"
           type="email"
@@ -115,25 +118,26 @@ export default function AuditForm() {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           required
-          className="w-full rounded-xl border border-white/10 bg-ink-900 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-accent-400/60 focus:ring-2 focus:ring-accent-400/20"
+          className="h-11 rounded-xl px-4"
         />
       </div>
 
       {errorMessage && (
-        <p role="alert" className="text-xs font-medium text-red-400">
+        <p role="alert" className="text-xs font-medium text-destructive">
           {errorMessage}
         </p>
       )}
 
-      <button
+      <Button
         type="submit"
         disabled={status === "submitting"}
-        className="mt-1 w-full rounded-xl bg-gradient-to-r from-accent-500 to-cyan-400 px-6 py-3.5 text-sm font-semibold text-ink-950 transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+        size="lg"
+        className="mt-1 h-11 w-full rounded-xl text-sm"
       >
         {status === "submitting" ? "Running audit…" : "Get My Free AI Visibility Audit"}
-      </button>
+      </Button>
 
-      <p className="text-center text-[11px] leading-relaxed text-white/35">
+      <p className="text-center text-[11px] leading-relaxed text-muted-foreground">
         No spam. We&rsquo;ll only email your audit results and, if relevant, a short
         follow-up. Unsubscribe anytime.
       </p>

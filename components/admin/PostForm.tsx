@@ -2,6 +2,17 @@
 
 import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export type PostFormValues = {
   slug: string;
@@ -36,10 +47,6 @@ function slugify(input: string): string {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 }
-
-const inputClass =
-  "w-full rounded-xl border border-white/10 bg-ink-900 px-4 py-2.5 text-sm text-white outline-none transition focus:border-accent-400/60 focus:ring-2 focus:ring-accent-400/20";
-const labelClass = "mb-1.5 block text-xs font-medium text-white/60";
 
 export default function PostForm({
   mode,
@@ -97,8 +104,11 @@ export default function PostForm({
     <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-5">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label className={labelClass}>Title</label>
-          <input
+          <Label htmlFor="title" className="mb-1.5 text-xs font-medium text-muted-foreground">
+            Title
+          </Label>
+          <Input
+            id="title"
             required
             value={values.title}
             onChange={(event) => {
@@ -106,115 +116,141 @@ export default function PostForm({
               update("title", title);
               if (!slugTouched) update("slug", slugify(title));
             }}
-            className={inputClass}
+            className="h-10 rounded-xl px-4"
           />
         </div>
         <div>
-          <label className={labelClass}>Slug</label>
-          <input
+          <Label htmlFor="slug" className="mb-1.5 text-xs font-medium text-muted-foreground">
+            Slug
+          </Label>
+          <Input
+            id="slug"
             required
             value={values.slug}
             onChange={(event) => {
               setSlugTouched(true);
               update("slug", slugify(event.target.value));
             }}
-            className={inputClass}
+            className="h-10 rounded-xl px-4 font-mono text-sm"
           />
         </div>
       </div>
 
       <div>
-        <label className={labelClass}>Excerpt / Description</label>
-        <textarea
+        <Label htmlFor="description" className="mb-1.5 text-xs font-medium text-muted-foreground">
+          Excerpt / Description
+        </Label>
+        <Textarea
+          id="description"
           required
           rows={2}
           value={values.description}
           onChange={(event) => update("description", event.target.value)}
-          className={inputClass}
+          className="rounded-xl px-4 py-3"
         />
       </div>
 
       <div>
-        <label className={labelClass}>Direct Answer (the answer-first callout at the top of the post)</label>
-        <textarea
+        <Label htmlFor="answer" className="mb-1.5 text-xs font-medium text-muted-foreground">
+          Direct Answer (the answer-first callout at the top of the post)
+        </Label>
+        <Textarea
+          id="answer"
           required
           rows={2}
           value={values.answer}
           onChange={(event) => update("answer", event.target.value)}
-          className={inputClass}
+          className="rounded-xl px-4 py-3"
         />
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
         <div>
-          <label className={labelClass}>Date</label>
-          <input
+          <Label htmlFor="date" className="mb-1.5 text-xs font-medium text-muted-foreground">
+            Date
+          </Label>
+          <Input
+            id="date"
             required
             type="date"
             value={values.date}
             onChange={(event) => update("date", event.target.value)}
-            className={inputClass}
+            className="h-10 rounded-xl px-4"
           />
         </div>
         <div>
-          <label className={labelClass}>Author</label>
-          <input
+          <Label htmlFor="author" className="mb-1.5 text-xs font-medium text-muted-foreground">
+            Author
+          </Label>
+          <Input
+            id="author"
             required
             value={values.author}
             onChange={(event) => update("author", event.target.value)}
-            className={inputClass}
+            className="h-10 rounded-xl px-4"
           />
         </div>
         <div>
-          <label className={labelClass}>Status</label>
-          <select
+          <Label className="mb-1.5 text-xs font-medium text-muted-foreground">Status</Label>
+          <Select
             value={values.status}
-            onChange={(event) => update("status", event.target.value as "draft" | "published")}
-            className={inputClass}
+            onValueChange={(value) => update("status", value as "draft" | "published")}
           >
-            <option value="draft">Draft</option>
-            <option value="published">Published</option>
-          </select>
+            <SelectTrigger className="h-10 w-full rounded-xl px-4">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="draft">Draft</SelectItem>
+              <SelectItem value="published">Published</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
 
       <div>
-        <label className={labelClass}>Tags (comma-separated)</label>
-        <input
+        <Label htmlFor="tags" className="mb-1.5 text-xs font-medium text-muted-foreground">
+          Tags (comma-separated)
+        </Label>
+        <Input
+          id="tags"
           value={values.tags}
           onChange={(event) => update("tags", event.target.value)}
           placeholder="GEO, AI Search"
-          className={inputClass}
+          className="h-10 rounded-xl px-4"
         />
       </div>
 
       <div>
-        <label className={labelClass}>Content (Markdown)</label>
-        <textarea
+        <Label htmlFor="content" className="mb-1.5 text-xs font-medium text-muted-foreground">
+          Content (Markdown)
+        </Label>
+        <Textarea
+          id="content"
           required
           rows={18}
           value={values.content}
           onChange={(event) => update("content", event.target.value)}
           spellCheck={false}
-          className={`${inputClass} font-mono text-sm`}
+          className="rounded-xl px-4 py-3 font-mono text-sm"
         />
       </div>
 
       {error && (
-        <p role="alert" className="text-sm font-medium text-red-400">
+        <p role="alert" className="text-sm font-medium text-destructive">
           {error}
         </p>
       )}
 
       <div className="flex flex-wrap items-center gap-3">
-        <button
+        <Button
           type="submit"
           disabled={status === "saving"}
-          className="rounded-full bg-gradient-to-r from-accent-500 to-cyan-400 px-6 py-2.5 text-sm font-semibold text-ink-950 transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+          size="lg"
+          className="h-10 rounded-full px-6 text-sm"
         >
           {status === "saving" ? "Saving…" : mode === "create" ? "Create Post" : "Save Changes"}
-        </button>
-        <span className="text-xs text-white/35">
+        </Button>
+        <span className="text-xs text-muted-foreground">
           On the live site this commits to GitHub and redeploys — live in ~30-60s.
         </span>
       </div>

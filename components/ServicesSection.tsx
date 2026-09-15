@@ -1,18 +1,19 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteConfig } from "@/lib/site-config";
 import { SERVICE_ICONS } from "@/components/icons/ServiceIcons";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="border-t border-white/5 py-24">
+    <section id="services" className="border-t border-border py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-wider text-accent-400">
+          <p className="text-xs font-semibold uppercase tracking-wider text-accent-500">
             Services
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Everything it takes to become the answer, not just a result
           </h2>
-          <p className="mt-4 text-white/50">
+          <p className="mt-4 text-muted-foreground">
             A full-stack GEO engagement: entity foundations, AI-citable content,
             technical infrastructure, and earned corroboration — run like a growth
             program, not a one-off audit.
@@ -20,20 +21,29 @@ export default function ServicesSection() {
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {siteConfig.services.map((service) => {
+          {siteConfig.services.map((service, index) => {
             const Icon = SERVICE_ICONS[service.slug];
             return (
-              <article
+              <Card
                 key={service.slug}
                 id={service.slug}
-                className="scroll-mt-24 rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-white/20 hover:bg-white/[0.04]"
+                className="scroll-mt-24 gap-3 rounded-2xl border-border p-2 shadow-none ring-0 transition hover:border-accent-400/50 hover:shadow-sm"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-accent-500/15 to-cyan-400/15 text-accent-300 ring-1 ring-inset ring-white/10">
-                  {Icon ? <Icon className="h-5 w-5" /> : null}
-                </div>
-                <h3 className="mt-4 text-lg font-semibold text-white">{service.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/55">{service.summary}</p>
-              </article>
+                <CardHeader className="px-4 pt-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-accent-foreground">
+                    {Icon ? <Icon className="h-5 w-5" /> : null}
+                  </div>
+                  <CardTitle className="mt-3 text-base font-semibold text-foreground">
+                    {service.name}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="px-4 pb-2">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {service.summary}
+                  </p>
+                </CardContent>
+                <span className="sr-only">{String(index + 1).padStart(2, "0")}</span>
+              </Card>
             );
           })}
         </div>
