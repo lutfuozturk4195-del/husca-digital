@@ -1,0 +1,98 @@
+{
+  "name": "Husca Digital",
+  "legalName": "Husca Digital LLC",
+  "tagline": "AI Search & GEO Growth Lab",
+  "valueProposition": "We Get B2B Companies Recommended by ChatGPT & Perplexity",
+  "description": "Husca Digital is a Generative Engine Optimization (GEO) and technical SEO growth agency that helps US-based B2B SaaS companies get cited and recommended by AI answer engines like ChatGPT, Perplexity, and Google AI Overviews — through entity optimization, AI-citable content, and automated visibility audits.",
+  "url": "https://huscadigital.com",
+  "logo": "https://huscadigital.com/logo.png",
+  "foundingDate": "2025-01-01",
+  "email": "hello@huscadigital.com",
+  "areaServed": "US",
+  "addressCountry": "US",
+  "sameAs": [
+    "https://www.linkedin.com/company/husca-digital",
+    "https://twitter.com/huscadigital",
+    "https://www.crunchbase.com/organization/husca-digital"
+  ],
+  "knowsAbout": [
+    "Generative Engine Optimization (GEO)",
+    "AI Search Visibility",
+    "ChatGPT Ranking Optimization",
+    "Perplexity SEO",
+    "Answer Engine Optimization (AEO)",
+    "Entity-Based SEO",
+    "Knowledge Graph Optimization",
+    "AI Citation Building",
+    "LLM Content Optimization",
+    "Technical SEO",
+    "B2B SaaS Growth Marketing",
+    "Schema.org Structured Data"
+  ],
+  "services": [
+    {
+      "name": "AI Search Visibility Audit",
+      "slug": "ai-search-visibility-audit",
+      "summary": "A free, automated audit that shows exactly how (and whether) ChatGPT, Perplexity, and Google AI Overviews currently cite your brand versus your competitors."
+    },
+    {
+      "name": "GEO Content Engineering",
+      "slug": "geo-content-engineering",
+      "summary": "Answer-first, entity-rich technical content built to be lifted and cited verbatim by generative answer engines — not just ranked by Google."
+    },
+    {
+      "name": "Entity & Knowledge Graph Optimization",
+      "slug": "entity-knowledge-graph-optimization",
+      "summary": "Structured data, sameAs linking, and entity consolidation so AI models correctly identify, disambiguate, and trust your brand as a knowledge-graph node."
+    },
+    {
+      "name": "AI Citation Building & Digital PR",
+      "slug": "ai-citation-building",
+      "summary": "Earned mentions on the high-trust sources LLMs are trained on and retrieve from, engineered to increase citation frequency in AI answers."
+    },
+    {
+      "name": "Technical GEO Infrastructure",
+      "slug": "technical-geo-infrastructure",
+      "summary": "llms.txt implementation, edge-rendered static pages, crawler-friendly architecture, and Core Web Vitals tuning for both bots and buyers."
+    },
+    {
+      "name": "AI Citation Monitoring & Reporting",
+      "slug": "ai-citation-monitoring",
+      "summary": "Ongoing tracking of citation frequency and share of AI voice across ChatGPT, Perplexity, and Google AI Overviews, with monthly reporting against named competitors."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is GEO (Generative Engine Optimization)?",
+      "answer": "GEO is the practice of structuring your brand's content, entities, and technical infrastructure so AI answer engines — ChatGPT, Perplexity, Google AI Overviews, Claude — can accurately parse, trust, and cite you in their generated answers. Where SEO optimizes for a ranked list of blue links, GEO optimizes for being the source an AI model quotes or recommends directly."
+    },
+    {
+      "question": "How is GEO different from traditional SEO?",
+      "answer": "Traditional SEO targets keyword rankings on a search results page a human scrolls through. GEO targets inclusion inside a synthesized AI answer a human never scrolls past. That means different inputs win: clear entity definitions, structured data, answer-first content blocks, and citation-worthy statistics matter more than backlink volume or keyword density alone."
+    },
+    {
+      "question": "Why isn't Google SEO enough in 2026?",
+      "answer": "A growing share of B2B research now starts in ChatGPT or Perplexity instead of Google, and Google's own AI Overviews already answer many queries before a user clicks a single organic result. If your content isn't structured for machine extraction and citation, you can rank on page one and still be invisible in the answer your buyer actually reads."
+    },
+    {
+      "question": "How do you get a B2B SaaS brand recommended by ChatGPT?",
+      "answer": "We combine entity optimization (making sure AI models correctly identify who you are and what you do), technical infrastructure (schema markup, llms.txt, crawlable static pages), and answer-first content engineered to be extracted and cited — then we track citation frequency across models and iterate like any other growth channel."
+    },
+    {
+      "question": "What is an AI Citation & Visibility Audit?",
+      "answer": "It's a free automated report that queries multiple AI answer engines with the questions your buyers actually ask, then shows whether your brand is cited, how you compare to named competitors, and the specific technical and content gaps holding you back."
+    },
+    {
+      "question": "How long does it take to see results from GEO?",
+      "answer": "Technical fixes (schema, llms.txt, page structure) can influence AI crawlers within days to weeks. Durable citation growth from new content and entity authority typically compounds over 60–120 days, similar to early-stage SEO, but often faster since generative engines re-crawl and re-synthesize more frequently than traditional search indexes."
+    },
+    {
+      "question": "Do we still need traditional SEO if we invest in GEO?",
+      "answer": "Yes. GEO and SEO share the same foundation — technical health, authoritative content, credible entities — and reinforce each other. We treat GEO as the next layer on top of solid SEO, not a replacement for it."
+    },
+    {
+      "question": "Which AI engines do you optimize for?",
+      "answer": "Our core focus is ChatGPT, Perplexity, and Google AI Overviews, since that's where most US B2B buying research now happens. The same entity and technical work also improves visibility in Claude, Copilot, and emerging answer engines, because they draw on overlapping structured-data and crawl signals."
+    }
+  ]
+}

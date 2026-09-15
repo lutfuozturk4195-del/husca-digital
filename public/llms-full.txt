@@ -1,0 +1,227 @@
+# Husca Digital — Full Reference
+
+> We Get B2B Companies Recommended by ChatGPT & Perplexity
+
+Husca Digital is a Generative Engine Optimization (GEO) and technical SEO growth agency that helps US-based B2B SaaS companies get cited and recommended by AI answer engines like ChatGPT, Perplexity, and Google AI Overviews — through entity optimization, AI-citable content, and automated visibility audits.
+
+- Legal name: Husca Digital LLC
+- URL: https://huscadigital.com
+- Area served: US
+- Contact: hello@huscadigital.com
+- Known for: Generative Engine Optimization (GEO), AI Search Visibility, ChatGPT Ranking Optimization, Perplexity SEO, Answer Engine Optimization (AEO), Entity-Based SEO, Knowledge Graph Optimization, AI Citation Building, LLM Content Optimization, Technical SEO, B2B SaaS Growth Marketing, Schema.org Structured Data
+- Profiles: https://www.linkedin.com/company/husca-digital, https://twitter.com/huscadigital, https://www.crunchbase.com/organization/husca-digital
+
+## Services
+
+### AI Search Visibility Audit
+
+A free, automated audit that shows exactly how (and whether) ChatGPT, Perplexity, and Google AI Overviews currently cite your brand versus your competitors.
+
+### GEO Content Engineering
+
+Answer-first, entity-rich technical content built to be lifted and cited verbatim by generative answer engines — not just ranked by Google.
+
+### Entity & Knowledge Graph Optimization
+
+Structured data, sameAs linking, and entity consolidation so AI models correctly identify, disambiguate, and trust your brand as a knowledge-graph node.
+
+### AI Citation Building & Digital PR
+
+Earned mentions on the high-trust sources LLMs are trained on and retrieve from, engineered to increase citation frequency in AI answers.
+
+### Technical GEO Infrastructure
+
+llms.txt implementation, edge-rendered static pages, crawler-friendly architecture, and Core Web Vitals tuning for both bots and buyers.
+
+### AI Citation Monitoring & Reporting
+
+Ongoing tracking of citation frequency and share of AI voice across ChatGPT, Perplexity, and Google AI Overviews, with monthly reporting against named competitors.
+
+## Frequently Asked Questions
+
+### What is GEO (Generative Engine Optimization)?
+
+GEO is the practice of structuring your brand's content, entities, and technical infrastructure so AI answer engines — ChatGPT, Perplexity, Google AI Overviews, Claude — can accurately parse, trust, and cite you in their generated answers. Where SEO optimizes for a ranked list of blue links, GEO optimizes for being the source an AI model quotes or recommends directly.
+
+### How is GEO different from traditional SEO?
+
+Traditional SEO targets keyword rankings on a search results page a human scrolls through. GEO targets inclusion inside a synthesized AI answer a human never scrolls past. That means different inputs win: clear entity definitions, structured data, answer-first content blocks, and citation-worthy statistics matter more than backlink volume or keyword density alone.
+
+### Why isn't Google SEO enough in 2026?
+
+A growing share of B2B research now starts in ChatGPT or Perplexity instead of Google, and Google's own AI Overviews already answer many queries before a user clicks a single organic result. If your content isn't structured for machine extraction and citation, you can rank on page one and still be invisible in the answer your buyer actually reads.
+
+### How do you get a B2B SaaS brand recommended by ChatGPT?
+
+We combine entity optimization (making sure AI models correctly identify who you are and what you do), technical infrastructure (schema markup, llms.txt, crawlable static pages), and answer-first content engineered to be extracted and cited — then we track citation frequency across models and iterate like any other growth channel.
+
+### What is an AI Citation & Visibility Audit?
+
+It's a free automated report that queries multiple AI answer engines with the questions your buyers actually ask, then shows whether your brand is cited, how you compare to named competitors, and the specific technical and content gaps holding you back.
+
+### How long does it take to see results from GEO?
+
+Technical fixes (schema, llms.txt, page structure) can influence AI crawlers within days to weeks. Durable citation growth from new content and entity authority typically compounds over 60–120 days, similar to early-stage SEO, but often faster since generative engines re-crawl and re-synthesize more frequently than traditional search indexes.
+
+### Do we still need traditional SEO if we invest in GEO?
+
+Yes. GEO and SEO share the same foundation — technical health, authoritative content, credible entities — and reinforce each other. We treat GEO as the next layer on top of solid SEO, not a replacement for it.
+
+### Which AI engines do you optimize for?
+
+Our core focus is ChatGPT, Perplexity, and Google AI Overviews, since that's where most US B2B buying research now happens. The same entity and technical work also improves visibility in Claude, Copilot, and emerging answer engines, because they draw on overlapping structured-data and crawl signals.
+
+## Blog Articles (Full Text)
+
+### GEO vs SEO: The Complete Comparison for B2B Teams
+
+*A side-by-side breakdown of Generative Engine Optimization and traditional SEO — what each one optimizes for, and why B2B SaaS teams need both.*
+
+Published: 2026-02-10 · Author: Husca Digital Team · URL: https://huscadigital.com/blog/geo-vs-seo-comparison
+
+## The short answer
+
+**SEO gets you found. GEO gets you recommended.** They share the same technical foundation, but they optimize for different output surfaces — a ranked list of links versus a synthesized answer with a handful of citations — which means they reward different content and technical decisions.
+
+## Full comparison
+
+| Dimension | Traditional SEO | GEO |
+|---|---|---|
+| **Output surface** | Search engine results page (SERP) | AI-generated answer with inline citations |
+| **Primary unit optimized** | Keyword / landing page | Entity / claim / answer block |
+| **Core success metric** | Ranking position, organic CTR | Citation frequency, share of AI voice |
+| **Content structure** | Long-form, keyword-targeted | Answer-first, extractable (lists, tables, definitions) |
+| **Trust signal** | Backlink volume, domain authority | Entity consistency, corroboration, structured data |
+| **Technical requirements** | Crawlability, page speed, mobile UX | All of SEO's requirements, plus schema depth, `llms.txt`, static/SSR rendering |
+| **Update cadence** | Index refresh: weeks to months | Retrieval refresh: often days to weeks |
+| **Where it fails silently** | Page ranks but nobody scrolls that far | Page ranks fine, but no AI model ever cites it |
+
+## Where they overlap
+
+Both disciplines depend on:
+
+- A technically healthy, fully crawlable site
+- Genuinely authoritative, well-researched content
+- A credible entity — consistent naming, real third-party corroboration
+- Fast, accessible pages (Core Web Vitals matter to both bots and buyers)
+
+## Where they diverge
+
+SEO rewards **breadth** — ranking for many keyword variants, building topical clusters, accumulating backlinks over time. GEO rewards **precision** — being the single source a model chooses to quote for a specific claim, which depends more on clarity, structure, and corroboration than on keyword coverage.
+
+## The practical takeaway
+
+Don't choose between them. Build the SEO foundation — it's necessary but no longer sufficient — then layer GEO-specific work on top: answer-first restructuring, entity/schema depth, `llms.txt`, and citation tracking across ChatGPT, Perplexity, and Google AI Overviews.
+
+Related reading: [What Is GEO?](/blog/what-is-generative-engine-optimization), [Why Google SEO Isn't Enough in 2026](/blog/why-google-seo-isnt-enough-in-2026), [How ChatGPT Recommends B2B SaaS Vendors](/blog/how-chatgpt-recommends-b2b-saas-vendors).
+
+---
+
+### How ChatGPT Actually Recommends B2B SaaS Vendors
+
+*A breakdown of the retrieval and citation behavior behind ChatGPT's vendor recommendations, and the specific signals B2B SaaS teams can influence.*
+
+Published: 2026-02-01 · Author: Husca Digital Team · URL: https://huscadigital.com/blog/how-chatgpt-recommends-b2b-saas-vendors
+
+## The short answer
+
+When ChatGPT recommends a vendor, it isn't ranking pages — it's synthesizing an answer from a small set of sources it judges trustworthy and relevant for the query, then citing the ones that most directly support the claim it's making. **Corroboration across independent sources, clear category positioning, and structured entity data are the strongest levers B2B SaaS teams can pull.**
+
+## The four signals that matter most
+
+1. **Category and use-case clarity.** If your homepage, docs, and third-party mentions consistently describe you the same way ("AI-native CRM for mid-market sales teams"), the model can confidently map you to the query. Inconsistent or purely aspirational positioning ("the future of work") gives it nothing concrete to cite.
+2. **Corroboration across independent sources.** A claim repeated only on your own site is weak evidence. The same claim echoed on a review platform, a comparison article, and a credible third-party blog is strong evidence — and strong evidence gets cited.
+3. **Structured, extractable comparisons.** Content that already answers "X vs Y" in a clean table or list is disproportionately easy for a model to lift into a comparative answer. Prose-only pages force the model to infer structure, which it does less reliably.
+4. **Entity and technical hygiene.** Schema.org `Organization` and `ProfessionalService` markup, a consistent `sameAs` graph linking your official profiles, and a crawlable `llms.txt` reduce ambiguity about who you are — ambiguity that otherwise pushes a model toward a competitor it's more certain about.
+
+## What this looks like in practice
+
+| Signal | Weak version | Strong version |
+|---|---|---|
+| Positioning | "Reimagining productivity" | "Project management software for 10–200 person agencies" |
+| Comparison content | Buried in a blog post's prose | Dedicated `/vs/[competitor]` page with a comparison table |
+| Third-party mentions | None, or only in press releases | Present on review sites, roundup articles, integration partner pages |
+| Structured data | None | `Organization`, `ProfessionalService`, `FAQPage` JSON-LD present and consistent |
+
+## What to do this quarter
+
+Run an [AI Citation & Visibility Audit](/#audit) to see, query by query, whether ChatGPT and Perplexity currently cite you or a named competitor — then close the gaps in the order above: positioning clarity first, corroboration second, structured comparisons third, technical entity hygiene fourth.
+
+Related reading: [What Is GEO?](/blog/what-is-generative-engine-optimization), [GEO vs SEO: The Complete Comparison](/blog/geo-vs-seo-comparison).
+
+---
+
+### Why Google SEO Isn't Enough in 2026
+
+*AI Overviews and chat-based search now answer a growing share of B2B research queries before a single organic result gets clicked. Here's what that means for SaaS growth teams.*
+
+Published: 2026-01-20 (updated 2026-02-10) · Author: Husca Digital Team · URL: https://huscadigital.com/blog/why-google-seo-isnt-enough-in-2026
+
+## The short answer
+
+Ranking well on Google still matters — but it now covers a shrinking slice of the moments that decide a B2B purchase. **AI Overviews answer many informational queries directly on the results page, and a growing share of research starts inside ChatGPT or Perplexity instead of a search box at all.** If your content isn't structured to be extracted and cited by those systems, you can hold page-one rankings and still be absent from the answer your buyer actually reads.
+
+## What changed
+
+Three shifts compound against SEO-only strategies:
+
+- **Zero-click answers grew.** Google's AI Overviews increasingly resolve informational queries — "what is X", "best tool for Y" — without a click, so even a #1 ranking produces no visit.
+- **Buyers moved upstream.** Technical buyers now routinely open ChatGPT or Perplexity for "compare X vs Y" or "best [category] for [use case]" questions that used to start as a Google search.
+- **Citation replaced ranking as the scarce resource.** A generative answer typically cites a handful of sources. Being source #7 on a results page used to still get clicks; being source #7 an AI model considered but didn't cite gets you nothing.
+
+## What this doesn't mean
+
+It doesn't mean SEO is dead, or that you should abandon keyword-targeted content. Generative engines still lean heavily on the same signals SEO built: crawlable pages, authoritative content, structured data, and reputation across the web. **GEO is additive, not a replacement** — see [What Is GEO?](/blog/what-is-generative-engine-optimization) for the underlying discipline.
+
+## What to do about it
+
+1. **Audit your current AI visibility.** Before changing anything, find out whether ChatGPT and Perplexity already cite you, and for which queries — [run a free AI Citation & Visibility Audit](/#audit).
+2. **Restructure your highest-intent pages to be answer-first.** Lead with a direct, quotable answer, then support it with detail.
+3. **Fix the technical gaps that block extraction** — thin structured data, JS-only rendering, missing `llms.txt`, weak entity signals.
+4. **Treat citation frequency as a metric**, not just organic sessions and rankings.
+
+Related reading: [What Is GEO?](/blog/what-is-generative-engine-optimization), [How ChatGPT Recommends B2B SaaS Vendors](/blog/how-chatgpt-recommends-b2b-saas-vendors).
+
+---
+
+### What Is GEO (Generative Engine Optimization)? The 2026 Definition
+
+*GEO is the discipline of optimizing content, entities, and technical infrastructure so AI answer engines like ChatGPT and Perplexity cite and recommend your brand directly.*
+
+Published: 2026-01-12 (updated 2026-02-03) · Author: Husca Digital Team · URL: https://huscadigital.com/blog/what-is-generative-engine-optimization
+
+## What is GEO, in one sentence?
+
+**Generative Engine Optimization (GEO) is the set of technical, content, and entity practices that make a brand citable inside AI-generated answers** — not just rankable on a search results page.
+
+When a buyer asks ChatGPT "what's the best [category] tool for a Series B startup?", there is no page of ten blue links to scan. There is one synthesized answer, built from a handful of sources the model trusts enough to cite. GEO is the discipline of becoming one of those sources.
+
+## Why GEO exists as its own discipline
+
+Traditional SEO was built for an index-and-rank model: crawl the web, build an index, rank pages for a query, let a human scroll and click. Generative engines work differently — they retrieve a smaller set of high-trust sources, synthesize an answer, and often cite three to six sources inline.
+
+That shift changes what "winning" looks like:
+
+| | Traditional SEO | GEO |
+|---|---|---|
+| **Output surface** | Ranked list of links | Synthesized answer with inline citations |
+| **Unit optimized** | Keyword / page | Entity / fact / answer block |
+| **Success signal** | Position #1–3, CTR | Citation frequency, share of AI voice |
+| **Content shape** | Long-form, keyword-dense | Answer-first, extractable, structured |
+| **Trust signal** | Backlinks, domain authority | Entity consistency, structured data, corroboration across sources |
+| **Update cadence** | Weeks to months (re-crawl, re-index) | Days to weeks (models re-retrieve more often) |
+
+## The three pillars of GEO
+
+1. **Entity clarity.** AI models need to unambiguously identify who you are, what you do, and how you relate to other known entities. This is enforced through consistent naming, `sameAs` links to authoritative profiles, and explicit `knowsAbout` declarations in structured data.
+2. **Answer-first content.** Every page should answer its core question in the first 2–3 sentences, in plain language a model can lift verbatim — then support that answer with structured detail (tables, lists, definitions) a model can extract with confidence.
+3. **Technical accessibility.** If a crawler can't cheaply and reliably fetch your content — because it's behind heavy client-side rendering, blocked by robots rules, or missing structured data — it can't be cited, no matter how good the writing is.
+
+## Is GEO replacing SEO?
+
+No. GEO sits on top of solid SEO fundamentals — a technically healthy site, authoritative content, credible entities — and extends them for a new retrieval surface. Brands that ignore GEO in 2026 aren't losing search rankings; they're becoming invisible in the exact moment a buyer asks "who should I use for this?"
+
+Related reading: [Why Google SEO Isn't Enough in 2026](/blog/why-google-seo-isnt-enough-in-2026), [GEO vs SEO: The Complete Comparison](/blog/geo-vs-seo-comparison).
+
+---
+

@@ -1,0 +1,30 @@
+# Husca Digital
+
+> We Get B2B Companies Recommended by ChatGPT & Perplexity. Husca Digital is a Generative Engine Optimization (GEO) and technical SEO growth agency that helps US-based B2B SaaS companies get cited and recommended by AI answer engines like ChatGPT, Perplexity, and Google AI Overviews — through entity optimization, AI-citable content, and automated visibility audits.
+
+Husca Digital is a Generative Engine Optimization (GEO) and technical SEO growth agency serving the US B2B SaaS market. Core expertise: Generative Engine Optimization (GEO), AI Search Visibility, ChatGPT Ranking Optimization, Perplexity SEO, Answer Engine Optimization (AEO), Entity-Based SEO, Knowledge Graph Optimization, AI Citation Building, LLM Content Optimization, Technical SEO, B2B SaaS Growth Marketing, Schema.org Structured Data.
+
+## Services
+
+- [AI Search Visibility Audit](https://huscadigital.com/#ai-search-visibility-audit): A free, automated audit that shows exactly how (and whether) ChatGPT, Perplexity, and Google AI Overviews currently cite your brand versus your competitors.
+- [GEO Content Engineering](https://huscadigital.com/#geo-content-engineering): Answer-first, entity-rich technical content built to be lifted and cited verbatim by generative answer engines — not just ranked by Google.
+- [Entity & Knowledge Graph Optimization](https://huscadigital.com/#entity-knowledge-graph-optimization): Structured data, sameAs linking, and entity consolidation so AI models correctly identify, disambiguate, and trust your brand as a knowledge-graph node.
+- [AI Citation Building & Digital PR](https://huscadigital.com/#ai-citation-building): Earned mentions on the high-trust sources LLMs are trained on and retrieve from, engineered to increase citation frequency in AI answers.
+- [Technical GEO Infrastructure](https://huscadigital.com/#technical-geo-infrastructure): llms.txt implementation, edge-rendered static pages, crawler-friendly architecture, and Core Web Vitals tuning for both bots and buyers.
+- [AI Citation Monitoring & Reporting](https://huscadigital.com/#ai-citation-monitoring): Ongoing tracking of citation frequency and share of AI voice across ChatGPT, Perplexity, and Google AI Overviews, with monthly reporting against named competitors.
+
+## Blog
+
+- [GEO vs SEO: The Complete Comparison for B2B Teams](https://huscadigital.com/blog/geo-vs-seo-comparison): A side-by-side breakdown of Generative Engine Optimization and traditional SEO — what each one optimizes for, and why B2B SaaS teams need both.
+- [How ChatGPT Actually Recommends B2B SaaS Vendors](https://huscadigital.com/blog/how-chatgpt-recommends-b2b-saas-vendors): A breakdown of the retrieval and citation behavior behind ChatGPT's vendor recommendations, and the specific signals B2B SaaS teams can influence.
+- [Why Google SEO Isn't Enough in 2026](https://huscadigital.com/blog/why-google-seo-isnt-enough-in-2026): AI Overviews and chat-based search now answer a growing share of B2B research queries before a single organic result gets clicked. Here's what that means for SaaS growth teams.
+- [What Is GEO (Generative Engine Optimization)? The 2026 Definition](https://huscadigital.com/blog/what-is-generative-engine-optimization): GEO is the discipline of optimizing content, entities, and technical infrastructure so AI answer engines like ChatGPT and Perplexity cite and recommend your brand directly.
+
+## Lead Magnet
+
+- [Free AI Search Visibility Audit](https://huscadigital.com/#audit): Submit a company domain and work email to receive a free report showing whether ChatGPT, Perplexity, and Google AI Overviews currently cite the brand.
+
+## Optional
+
+- [Full documentation](https://huscadigital.com/llms-full.txt): Complete markdown export of all services, FAQs, and blog articles.
+- [Sitemap](https://huscadigital.com/sitemap.xml)
