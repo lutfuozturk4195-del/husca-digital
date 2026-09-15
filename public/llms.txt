@@ -15,6 +15,7 @@ Husca Digital is a Generative Engine Optimization (GEO) and technical SEO growth
 
 ## Blog
 
+- [AI Citations vs Search Rankings: The Zero-Click Future Explained](https://huscadigital.com/blog/zero-click-future-ai-citations-vs-rankings): AI citations vs search rankings: zero-click search is now the default, and AI engines often cite sources outside Google's top 10 in 2026.
 - [GEO vs SEO: The Complete Comparison for B2B Teams](https://huscadigital.com/blog/geo-vs-seo-comparison): A side-by-side breakdown of Generative Engine Optimization and traditional SEO — what each one optimizes for, and why B2B SaaS teams need both.
 - [How ChatGPT Actually Recommends B2B SaaS Vendors](https://huscadigital.com/blog/how-chatgpt-recommends-b2b-saas-vendors): A breakdown of the retrieval and citation behavior behind ChatGPT's vendor recommendations, and the specific signals B2B SaaS teams can influence.
 - [Why Google SEO Isn't Enough in 2026](https://huscadigital.com/blog/why-google-seo-isnt-enough-in-2026): AI Overviews and chat-based search now answer a growing share of B2B research queries before a single organic result gets clicked. Here's what that means for SaaS growth teams.
