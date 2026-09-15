@@ -65,23 +65,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row">
+        <div className="mt-12 border-t border-border pt-6 text-center text-xs text-muted-foreground md:text-left">
           <p>
             © {year} {siteConfig.legalName}. Built in the US, for the US B2B SaaS market.
           </p>
-          <div className="flex gap-4">
-            {siteConfig.sameAs.map((href) => (
-              <a
-                key={href}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-foreground"
-              >
-                {new URL(href).hostname.replace("www.", "")}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

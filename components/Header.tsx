@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
@@ -33,9 +34,21 @@ export default function Header() {
           ))}
         </nav>
 
-        <Button asChild size="lg" className="h-9 rounded-full px-5">
-          <Link href="/#audit">Get Free Audit</Link>
-        </Button>
+        <div className="flex items-center gap-2.5">
+          <Button
+            asChild
+            size="lg"
+            className="h-9 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-400 px-4 text-white shadow-md shadow-cyan-500/30 hover:-translate-y-0.5 hover:from-cyan-400 hover:to-cyan-400 hover:shadow-lg hover:shadow-cyan-500/40"
+          >
+            <a href="mailto:lutfu.dev@gmail.com">
+              <Mail className="size-4" />
+              <span className="hidden sm:inline">Contact</span>
+            </a>
+          </Button>
+          <Button asChild size="lg" className="h-9 rounded-full px-5">
+            <Link href="/#audit">Get Free Audit</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );

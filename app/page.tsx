@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Hero from "@/components/Hero";
 import AuditForm from "@/components/AuditForm";
+import NewsletterForm from "@/components/NewsletterForm";
 import ServicesSection from "@/components/ServicesSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import FAQSection from "@/components/FAQSection";
@@ -20,10 +21,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-6">
           <Card className="grid gap-10 rounded-3xl border-border p-2 shadow-xl shadow-accent-500/10 ring-0 md:grid-cols-2 md:gap-14 md:p-4">
             <div className="px-6 pt-6 md:px-4 md:pt-4">
-              <p className="text-xs font-semibold uppercase tracking-wider text-cyan-600">
-                Free Lead Magnet
-              </p>
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+              <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 Get a Free AI Citation &amp; Visibility Audit
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -44,6 +42,30 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-6 border-t border-border pt-5">
+                <p className="text-sm text-muted-foreground">
+                  Prefer to talk directly?{" "}
+                  <a
+                    href="mailto:lutfu.dev@gmail.com"
+                    className="font-semibold text-accent-500 hover:underline"
+                  >
+                    lutfu.dev@gmail.com
+                  </a>
+                </p>
+              </div>
+
+              <div className="mt-6 border-t border-border pt-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Stay in the loop
+                </p>
+                <p className="mt-1.5 text-sm text-muted-foreground">
+                  Get the GEO Playbook in your inbox — new articles, no spam.
+                </p>
+                <div className="mt-3">
+                  <NewsletterForm />
+                </div>
+              </div>
             </div>
 
             <div className="self-center px-6 pb-6 md:px-4 md:pb-4">
