@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { deleteFile, putFile } from "@/lib/admin/github";
-import type { PostStatus } from "@/lib/posts";
+import type { BlogCategoryId, PostStatus } from "@/lib/posts";
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
@@ -16,6 +16,7 @@ export type AdminPostInput = {
   tags: string[];
   answer: string;
   status: PostStatus;
+  category: BlogCategoryId;
   /** Raw markdown body (no frontmatter). */
   content: string;
 };

@@ -4,6 +4,7 @@ description: "AI citations vs search rankings: zero-click search is now the defa
 date: "2026-09-15"
 author: "Husca Digital Team"
 tags: ["Zero-Click Search", "AI Search", "GEO"]
+category: "seo-geo-ai"
 answer: "Ranking #1 on Google no longer guarantees visibility: only about 12% of URLs cited by ChatGPT, Gemini, and Copilot also rank in Google's top 10, and zero-click searches — where the query is answered without a click — now account for roughly 60-83% of all Google searches. Rankings and AI citations behave like two separate systems in 2026, and brands need a strategy for both."
 ---
 

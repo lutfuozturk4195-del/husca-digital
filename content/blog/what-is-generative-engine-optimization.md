@@ -5,6 +5,7 @@ date: "2026-01-12"
 updated: "2026-02-03"
 author: "Husca Digital Team"
 tags: ["GEO", "AI Search", "Fundamentals"]
+category: "seo-geo-ai"
 answer: "GEO (Generative Engine Optimization) is the practice of structuring a brand's content, entities, and technical infrastructure so generative AI answer engines — ChatGPT, Perplexity, Google AI Overviews, Claude — can accurately parse, trust, and cite that brand inside their synthesized answers, rather than merely ranking a page in a list of links."
 ---
 

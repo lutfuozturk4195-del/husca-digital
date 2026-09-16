@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getRawPostBySlug } from "@/lib/posts";
+import { BLOG_CATEGORIES, getRawPostBySlug } from "@/lib/posts";
 import PostForm from "@/components/admin/PostForm";
 
 export const metadata: Metadata = {
@@ -26,6 +26,7 @@ export default function EditPostPage({ params }: { params: { slug: string } }) {
           tags: post.tags.join(", "),
           answer: post.answer,
           status: post.status ?? "published",
+          category: post.category ?? BLOG_CATEGORIES[0].id,
           content: post.content,
         }}
       />

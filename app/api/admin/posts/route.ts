@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
-import { getAllPosts, getAllSlugs } from "@/lib/posts";
+import { BLOG_CATEGORIES, getAllPosts, getAllSlugs } from "@/lib/posts";
 import { savePost, type AdminPostInput } from "@/lib/admin/posts-store";
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const CATEGORY_IDS = BLOG_CATEGORIES.map((category) => category.id);
 
 export async function GET() {
   const posts = getAllPosts({ includeDrafts: true });
@@ -32,6 +33,9 @@ export async function POST(request: Request) {
   if (getAllSlugs().includes(slug)) {
     return NextResponse.json({ error: "A post with this slug already exists" }, { status: 409 });
   }
+  if (body.category && !CATEGORY_IDS.includes(body.category)) {
+    return NextResponse.json({ error: "Invalid category" }, { status: 400 });
+  }
 
   try {
     await savePost(
@@ -44,6 +48,7 @@ export async function POST(request: Request) {
         tags,
         answer,
         status: body.status === "draft" ? "draft" : "published",
+        category: body.category ?? CATEGORY_IDS[0],
         content,
       },
       true

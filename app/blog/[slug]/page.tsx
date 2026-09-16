@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import EntitySchema from "@/components/EntitySchema";
 import BlogCTA from "@/components/BlogCTA";
-import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import { getAllPosts, getCategoryLabel, getPostBySlug } from "@/lib/posts";
 import { siteConfig } from "@/lib/site-config";
 import { blogPostingSchema, breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 
@@ -75,6 +75,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
       <header className="mt-6">
         <div className="flex flex-wrap gap-2">
+          <Link href={`/blog?category=${post.category}`}>
+            <Badge className="rounded-full bg-accent-500/10 text-accent-600 hover:bg-accent-500/20">
+              {getCategoryLabel(post.category)}
+            </Badge>
+          </Link>
           {post.tags.map((tag) => (
             <Badge key={tag} variant="outline" className="rounded-full text-muted-foreground">
               {tag}

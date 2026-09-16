@@ -12,6 +12,11 @@ const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
 export type PostStatus = "draft" | "published";
 
+export { BLOG_CATEGORIES, getCategoryLabel, type BlogCategoryId } from "@/lib/blog-categories";
+import type { BlogCategoryId } from "@/lib/blog-categories";
+
+const DEFAULT_CATEGORY: BlogCategoryId = "seo-geo-ai";
+
 export type PostFrontmatter = {
   title: string;
   description: string;
@@ -23,9 +28,14 @@ export type PostFrontmatter = {
   answer: string;
   /** Defaults to "published" when omitted, so every pre-existing post keeps working unchanged. */
   status?: PostStatus;
+  /** Defaults to "seo-geo-ai" when omitted, so every pre-existing post keeps working unchanged. */
+  category?: BlogCategoryId;
 };
 
-export type PostMeta = PostFrontmatter & {
+/** Frontmatter as returned to callers: category is always resolved (defaulted if omitted on disk). */
+type NormalizedFrontmatter = PostFrontmatter & { category: BlogCategoryId };
+
+export type PostMeta = NormalizedFrontmatter & {
   slug: string;
   readingTimeMinutes: number;
 };
@@ -34,7 +44,7 @@ export type Post = PostMeta & {
   html: string;
 };
 
-export type RawPost = PostFrontmatter & {
+export type RawPost = NormalizedFrontmatter & {
   slug: string;
   /** Raw markdown body (frontmatter stripped, HTML NOT rendered) — for the admin editor only. */
   content: string;
@@ -67,6 +77,7 @@ export function getAllPosts(options: { includeDrafts?: boolean } = {}): PostMeta
       const fm = data as PostFrontmatter;
       return {
         ...fm,
+        category: fm.category ?? DEFAULT_CATEGORY,
         slug,
         readingTimeMinutes: readingTime(content),
       };
@@ -99,6 +110,7 @@ export async function getPostBySlug(
 
   return {
     ...fm,
+    category: fm.category ?? DEFAULT_CATEGORY,
     slug,
     readingTimeMinutes: readingTime(content),
     html: String(processed),
@@ -115,5 +127,11 @@ export function getRawPostBySlug(slug: string): RawPost | null {
   if (!fs.existsSync(filePath)) return null;
   const raw = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(raw);
-  return { ...(data as PostFrontmatter), slug, content: content.trim() };
+  const fm = data as PostFrontmatter;
+  return {
+    ...fm,
+    category: fm.category ?? DEFAULT_CATEGORY,
+    slug,
+    content: content.trim(),
+  };
 }

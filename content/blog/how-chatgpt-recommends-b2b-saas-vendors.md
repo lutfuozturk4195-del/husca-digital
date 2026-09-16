@@ -4,6 +4,7 @@ description: "A breakdown of the retrieval and citation behavior behind ChatGPT'
 date: "2026-02-01"
 author: "Husca Digital Team"
 tags: ["ChatGPT", "AI Search", "B2B SaaS"]
+category: "seo-geo-ai"
 answer: "ChatGPT recommends B2B SaaS vendors by retrieving and weighing a small set of high-trust sources — review platforms, comparison articles, docs, and your own site — then citing whichever sources most clearly and consistently describe your product's category, use case, and differentiation. Brands with clear entity signals and corroborated third-party mentions get recommended more often than brands with vague positioning alone."
 ---
 

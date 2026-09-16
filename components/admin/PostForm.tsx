@@ -13,6 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { BLOG_CATEGORIES, type BlogCategoryId } from "@/lib/blog-categories";
 
 export type PostFormValues = {
   slug: string;
@@ -24,6 +25,7 @@ export type PostFormValues = {
   tags: string;
   answer: string;
   status: "draft" | "published";
+  category: BlogCategoryId;
   content: string;
 };
 
@@ -36,6 +38,7 @@ const DEFAULT_VALUES: PostFormValues = {
   tags: "",
   answer: "",
   status: "draft",
+  category: BLOG_CATEGORIES[0].id,
   content: "",
 };
 
@@ -207,17 +210,37 @@ export default function PostForm({
         </div>
       </div>
 
-      <div>
-        <Label htmlFor="tags" className="mb-1.5 text-xs font-medium text-muted-foreground">
-          Tags (comma-separated)
-        </Label>
-        <Input
-          id="tags"
-          value={values.tags}
-          onChange={(event) => update("tags", event.target.value)}
-          placeholder="GEO, AI Search"
-          className="h-10 rounded-xl px-4"
-        />
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div>
+          <Label className="mb-1.5 text-xs font-medium text-muted-foreground">Category</Label>
+          <Select
+            value={values.category}
+            onValueChange={(value) => update("category", value as BlogCategoryId)}
+          >
+            <SelectTrigger className="h-10 w-full rounded-xl px-4">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {BLOG_CATEGORIES.map((category) => (
+                <SelectItem key={category.id} value={category.id}>
+                  {category.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+        <div>
+          <Label htmlFor="tags" className="mb-1.5 text-xs font-medium text-muted-foreground">
+            Tags (comma-separated)
+          </Label>
+          <Input
+            id="tags"
+            value={values.tags}
+            onChange={(event) => update("tags", event.target.value)}
+            placeholder="GEO, AI Search"
+            className="h-10 rounded-xl px-4"
+          />
+        </div>
       </div>
 
       <div>
