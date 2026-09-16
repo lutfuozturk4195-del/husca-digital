@@ -33,9 +33,19 @@ export default function Header() {
           ))}
         </nav>
 
-        <Button asChild size="lg" className="h-9 rounded-full px-5">
-          <Link href="/#audit">Get Free Audit</Link>
-        </Button>
+        <div className="flex items-center gap-3">
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="h-9 rounded-full px-5"
+          >
+            <a href="mailto:lutfu.dev@gmail.com">Contact</a>
+          </Button>
+          <Button asChild size="lg" className="h-9 rounded-full px-5">
+            <Link href="/#audit">Get Free Audit</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );
