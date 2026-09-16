@@ -2,16 +2,20 @@
 
 import { usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 /**
- * Wraps Vercel Web Analytics + Google Analytics 4 + Google Tag Manager so
- * /admin visits (the site owner using their own dashboard/CMS) don't get
- * counted as public traffic. Each Google tag only renders when its env var
- * is set, so leaving one unset locally just skips it entirely.
+ * Wraps Vercel Web Analytics + Google Tag Manager so /admin visits (the site
+ * owner using their own dashboard/CMS) don't get counted as public traffic.
+ *
+ * GA4 is NOT loaded directly here — it previously was (gtag.js) alongside
+ * GTM (gtm.js), which double-loaded Google's analytics scripts (~175KB +
+ * 550ms of main-thread blocking on top of GTM's own ~120KB/160ms) and
+ * dragged the mobile PageSpeed score down. GA4 now needs to be configured
+ * as a "Google Analytics: GA4 Configuration" tag inside the GTM container
+ * (tagmanager.google.com) instead, so there's a single script doing the job.
  */
 export default function SiteAnalytics() {
   const pathname = usePathname();
@@ -22,7 +26,6 @@ export default function SiteAnalytics() {
   return (
     <>
       <Analytics />
-      {GA_MEASUREMENT_ID && <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />}
       {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
     </>
   );
